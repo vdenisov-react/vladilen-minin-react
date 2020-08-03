@@ -4,5 +4,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
-    "cSpell.words": ["browserslist"]
+    "cSpell.words": [
+        "Parens",
+        "browserslist"
+    ]
 }
