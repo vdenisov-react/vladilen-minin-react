@@ -1,8 +1,13 @@
 {
     "name": "react-app",
     "scripts": {
+        "===> START <===": "----------",
         "start": "react-scripts start",
-        "build": "react-scripts build"
+        "===> BUILD <===": "----------",
+        "build": "react-scripts build",
+        "===> CHECKS <===": "----------",
+        "prettier": "prettier --check **/*.{html,css,js,jsx}",
+        "prettier-fix": "prettier --write **/*.{html,css,js,jsx}"
     },
     "dependencies": {
         "react": "^16.13.1",
