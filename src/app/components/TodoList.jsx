@@ -12,9 +12,13 @@ const styles = {
 export default function TodoList({ todos }) {
     return (
         <ul style={styles.ul}>
-            <TodoItem todo={todos[0]} />
-            <TodoItem todo={todos[1]} />
-            <TodoItem todo={todos[2]} />
+            {todos.map((todo, index) => {
+                return (
+                    <li key={todo.id}>
+                        <TodoItem todo={todo} />
+                    </li>
+                );
+            })}
         </ul>
     );
 }
