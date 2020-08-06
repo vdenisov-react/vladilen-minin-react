@@ -10,13 +10,13 @@ const styles = {
     },
 };
 
-function TodoList({ todos }) {
+function TodoList({ todos, onToggle }) {
     return (
         <ul style={styles.ul}>
             {todos.map((todo, index) => {
                 return (
                     <li key={todo.id}>
-                        <TodoItem todo={todo} index={index} />
+                        <TodoItem todo={todo} index={index} onChange={onToggle} />
                     </li>
                 );
             })}
@@ -26,6 +26,7 @@ function TodoList({ todos }) {
 
 TodoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+    onToggle: PropTypes.func.isRequired,
 };
 
 export default TodoList;
