@@ -4,7 +4,7 @@ import TodoList from './components/TodoList';
 function App() {
     const [todos, setTodos] = useState([
         { id: 1, completed: false, title: 'Buy milk' },
-        { id: 2, completed: false, title: 'Buy bread' },
+        { id: 2, completed: true, title: 'Buy bread' },
         { id: 3, completed: false, title: 'Buy butter' },
     ]);
 
