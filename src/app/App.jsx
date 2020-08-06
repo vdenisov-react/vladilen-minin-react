@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Context from './shared/context';
 import TodoList from './components/TodoList';
 import AddTodo from './components/AddTodo';
 
 function App() {
-    const [todos, setTodos] = useState([
-        { id: 1, completed: false, title: 'Buy milk' },
-        { id: 2, completed: true, title: 'Buy bread' },
-        { id: 3, completed: false, title: 'Buy butter' },
-    ]);
+    const [todos, setTodos] = useState([]);
+
+    useEffect(() => {
+        const API = 'https://jsonplaceholder.typicode.com';
+        fetch(`${API}/todos?_limit=5`)
+            .then(response => response.json())
+            .then(todos => setTodos(todos));
+    }, []);
 
     function toggleTodo(id) {
         setTodos(
