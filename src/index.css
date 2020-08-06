@@ -8,3 +8,10 @@ body {
     margin: 0 auto;
     width: 600px;
 }
+
+.rm-btn {
+    background: red;
+    border-radius: 50%;
+    color: white;
+    border: none;
+}
