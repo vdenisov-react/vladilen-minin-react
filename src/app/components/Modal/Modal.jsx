@@ -16,7 +16,7 @@ export default class Modal extends React.Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <button onClick={this.onOpenModal.bind(this)}>Open modal</button>
 
                 {this.state.isOpen && (
@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
                         </div>
                     </div>
                 )}
-            </div>
+            </React.Fragment>
         );
     }
 }
