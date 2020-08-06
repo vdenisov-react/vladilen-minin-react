@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TodoList from './components/TodoList';
+import Modal from './components/Modal/Modal';
 // import AddTodo from './components/AddTodo';
 import Context from './shared/context';
 import Loader from './shared/Loader';
@@ -57,6 +58,8 @@ function App() {
         <Context.Provider value={{ removeTodo }}>
             <div className="wrapper">
                 <h1>React tutorial</h1>
+
+                <Modal />
 
                 <React.Suspense fallback={<p>Loading...</p>}>
                     <AddTodo onCreate={addTodo} />
